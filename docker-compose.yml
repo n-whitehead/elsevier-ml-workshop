@@ -1,0 +1,13 @@
+version: '3'
+services:
+  jupyter-lab:
+    image: elsevier-ml-workshop
+    container_name: elsevier-ml-workshop
+    restart: always
+    hostname: ${HOST_NAME}
+    ports:
+      - ${HOST_PORT}:8888
+    volumes:
+      - ./notebooks:/elsevier-ml-workshop/notebooks
+      - ./data:/elsevier-ml-workshop/data
+      - ./img:/elsevier-ml-workshop/img
