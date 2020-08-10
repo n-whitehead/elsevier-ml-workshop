@@ -38,7 +38,7 @@ Any version of Python 3 should suffice, ideally `3.6+`.
 
 (TODO: Mount certs to docker container https://stackoverflow.com/questions/26028971/docker-container-ssl-certificates)
 
-Download the [ZScaler Root Certificate](https://confluence.cbsels.com/display/TEN/SSL+encryption%3A+Application%2C+Development+Environment%2C+and+Guest+OS+compatibility+requirements#SSLencryption:Application,DevelopmentEnvironment,andGuestOScompatibilityrequirements-Docker)
+Download the [ZScaler Root Certificate](https://confluence.cbsels.com/download/attachments/138391620/ZscalerRootCerts.zip?version=1&modificationDate=1572955832000&api=v2)
 and place the `.crt` file in the root directory of this project.
 
 ### Run the container
