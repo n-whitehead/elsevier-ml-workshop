@@ -6,7 +6,7 @@ to teach machine learning fundamentals for any role.
 ## Table of Contents
 1. Introduction to Python \& Jupyter Notebooks
 2. Concept Learning \& k-Nearest Neighbor
-3. Linear Models \& Support Vector Machines (SVM)
+3. Linear Models \& Support Vector Machines
 4. Decision Trees
 5. Ensemble Models
 6. Performance Evaluation \& Experimental Design Techniques
