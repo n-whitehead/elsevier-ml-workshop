@@ -13,7 +13,7 @@ to teach machine learning fundamentals for any role.
 7. Parametric Models, Hyper-parameter \& Model Selection
 8. Dimensionality Reduction
 9. Unsupervised Learning \& Clustering
-10. Artifical Neural Networks
+10. Artificial Neural Networks
 11. Deep Learning
 12. Reinforcement Learning
 
