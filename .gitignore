@@ -1,3 +1,8 @@
 **/.idea
 **/.ipynb_checkpoints
 *.crt
+.git
+.DS_Store
+*.zip
+*.pyc
+_pycache_
