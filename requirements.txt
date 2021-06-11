@@ -1,5 +1,3 @@
-# Jupyter packages
-jupyter
 jupyterlab
 
 # Core data science packages
