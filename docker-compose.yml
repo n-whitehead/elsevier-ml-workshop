@@ -2,6 +2,8 @@ version: '3'
 
 services:
   jupyter-lab:
+    build:
+      context: .
     container_name: elsevier-ml-workshop
     restart: unless-stopped
     ports:
@@ -10,7 +12,6 @@ services:
       - ./notebooks:/elsevier-ml-workshop/notebooks
       - ./data:/elsevier-ml-workshop/data
       - ./img:/elsevier-ml-workshop/img
-      - ./jupyter-lab/conf/:/etc/jupyter/
     networks:
       - workshop-network
 

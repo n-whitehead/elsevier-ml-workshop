@@ -25,19 +25,18 @@ RUN ls -latr ${ZSCALER_CA_PATH}/ && ls -latr ${REQUESTS_CA_BUNDLE} && update-ca-
 # Set working directory
 WORKDIR /elsevier-ml-workshop
 
-# Load additional requirements, upgrade pip
-COPY requirements.txt ../
-RUN pip install --upgrade pip
-RUN pip install -r ../requirements.txt
-
-RUN pip3 install --upgrade pip && \
-    python3 --version && \
-    pip3 --version
-
+# Copy notebooks and conf scripts into the image
+COPY requirements.txt .
 COPY /data /data/
 COPY /notebooks /notebooks/
 COPY /img /img/
 COPY ./conf/ /etc/jupyter/
+
+# Load additional requirements, upgrade pip
+RUN pip3 install --upgrade pip && \
+    python3 --version && \
+    pip3 --version && \
+    pip3 install -r requirements.txt
 
 # Run jupyter lab
 CMD ["jupyter", "lab"]
