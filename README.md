@@ -49,4 +49,4 @@ which will mount the appropriate volumes to the container. Once finished, copy o
 
 ### Contributing to the project
 
-The `master` branch will have completed content, while the `develop` branch will have content in progress. If you would like to contribute a topic, or if you find any errors in the code/markdown, please fork the repo and create a pull request! Let's make this a collaborative effort to improve ML understanding.
+The `master` branch will have completed content, while named lesson branches will have content in progress (follow format `workshop_lesson_<lesson number>` after adding the lesson number to the index above). If you would like to contribute a topic, or if you find any errors in the code/markdown, please fork the repo and create a pull request! Let's make this a collaborative effort to improve ML understanding.
