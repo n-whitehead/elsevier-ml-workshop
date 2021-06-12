@@ -29,7 +29,7 @@ Clone this repository into your desired workspace:
 
 Ideally, we would set up a script to download the cert into the container on creation.
 
-Download the [ZScaler Root Certificate](https://elsevier.atlassian.net/wiki/download/attachments/59535175745/ZscalerRootCerts.zip), open the `ZscalerRootCerts` directory, and move the `ZscalerRootCertificate-2048-SHA256.crt` file to the `/cert` directory of this project.
+Download the [ZScaler Root Certificate](https://elsevier.atlassian.net/wiki/download/attachments/59535175745/ZscalerRootCerts.zip), open the `ZscalerRootCerts` directory, and move the `ZscalerRootCertificate-2048-SHA256.crt` file to the root directory of this project.
 
 ### Run the container
 
