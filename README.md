@@ -17,38 +17,36 @@ to teach machine learning fundamentals for any role.
 11. Deep Learning
 12. Reinforcement Learning
 
-## Installation
+UPDATE: To create a more focused curriculum for the Knowledge Discovery efforts, I will add topics around machine learning Knowledge Graphs. I have not figured out a way to introduce these topics - stay tuned.
 
-First, you will need to have git installed, if not done already.
+## Installation
 
 Clone this repository into your desired workspace:
     
     $ git clone git@github.com:n-whitehead/elsevier-ml-workshop.git
 
-### Required Libraries (Python)
-
-This series will require Python 3, which is pre-installed on most systems. Check your Python version
-with:
-
-    $ python3 --version
-    
-Any version of Python 3 should suffice, ideally `3.6+`.
-
 ### Downloading ZScaler Cert (Windows users only)
 
-(TODO: Mount certs to docker container https://stackoverflow.com/questions/26028971/docker-container-ssl-certificates)
+Ideally, we would set up a script to download the cert into the container on creation.
 
-Download the [ZScaler Root Certificate](https://confluence.cbsels.com/download/attachments/138391620/ZscalerRootCerts.zip?version=1&modificationDate=1572955832000&api=v2)
-and place the `.crt` file in the root directory of this project.
+Download the [ZScaler Root Certificate](https://elsevier.atlassian.net/wiki/download/attachments/59535175745/ZscalerRootCerts.zip), open the `ZscalerRootCerts` directory, and move the `ZscalerRootCertificate-2048-SHA256.crt` file to the `/cert` directory of this project.
 
 ### Run the container
 
-In the root directory, create the Docker image for this project:
+In the root directory of this project, build the Docker service for this project:
 
-    $ docker build -t elsevier-ml-workshop .
+    $ docker compose build
     
 This will install all the required statistics and ML packages for running the lesson notebooks.
 
-Run the container using `docker-compose up` which will mount the appropriate volumes to the container. Once
-finished, copy the address with token from the docker-compose output (ie. `http://127.0.0.1:8888/?token=<token>`) into your browser to begin navigating
-the session.
+Start the container with 
+    
+    $ docker-compose up
+
+which will mount the appropriate volumes to the container. Once finished, copy one of the addresses with an attached token from the docker-compose output into your browser to begin navigating the session.
+
+![Jupyter URL with attached session token](img/readme/session.png?raw=true "Jupyter URL with attached session token")
+
+### Contributing to the project
+
+The `master` branch will have completed content, while the `develop` branch will have content in progress. If you would like to contribute a topic, or if you find any errors in the code/markdown, please fork the repo and create a pull request! Let's make this a collaborative effort to improve ML understanding.
