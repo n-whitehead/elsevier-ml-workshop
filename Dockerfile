@@ -15,7 +15,7 @@ ARG ZSCALER_CA_PATH="/usr/local/share/ca-certificates"
 # Local CA Certs TrustStore Location inside Container runtime - Zscaler Cert will be imported here, so we need to for its use!
 ARG REQUESTS_CA_BUNDLE="/etc/ssl/certs/ca-certificates.crt"
 # Copy Zscaler Cert into the directory in our Container
-COPY ./cert/${ZSCALER_ROOT_CERTS} ${ZSCALER_CA_PATH}/${ZSCALER_CA_CERT}
+COPY ${ZSCALER_ROOT_CERTS} ${ZSCALER_CA_PATH}/${ZSCALER_CA_CERT}
 # Run update-ca-certificates utility to import the Zscaler certificate into Container TrustStore at runtime...
 RUN ls -latr ${ZSCALER_CA_PATH}/ && ls -latr ${REQUESTS_CA_BUNDLE} && update-ca-certificates \
 # Set REQUESTS_CA_BUNDLE env variable so that when we install python and py-pip it will use our custom certs bundle instead of its own...
